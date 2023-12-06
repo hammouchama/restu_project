@@ -1,0 +1,41 @@
+<div class="login_container">
+     <div class="login_">
+          <div class="image">
+               <img src="assets/img/menu_15.jpg" alt="Logo" >
+          </div>
+          <div class="paragraphe">
+          <h2>WELCOME BACK!</h2>
+          <p>Please enter you details</p>
+          </div>
+          <form action="" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+               <div class="example-container">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Email</mat-label>
+                      <input matInput
+                      ngModel
+                      name="email"
+                      id="email"
+                       placeholder="something@example.com" required>
+                     
+                    </mat-form-field>
+                  </div>
+                  <div class="example-container">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Password</mat-label>
+                      <input matInput
+                      ngModel
+                      name="password"
+                      id="password"
+                      [type]="hide ? 'password' : 'text'">
+                      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                    </mat-form-field>
+                    </div>
+                    <div class="actions">
+                         <input mat-raised-button  color="primary" type="submit" value="Submit">
+                         <a href="#">Forgot Password?</a>
+                    </div>
+          </form>
+     </div>
+</div>

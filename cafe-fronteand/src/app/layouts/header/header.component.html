@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+     <span>
+       Cafe Applecatio   
+     </span>
+     <span class="example-spacer"></span>
+     <button *ngIf="!isLoggedIn()" mat-raised-button color="primary" routerLink="/login">
+           Login
+     </button>
+
+     <button *ngIf="isLoggedIn()" mat-raised-button color="warn" (click)="logout()">
+          Logout
+     </button>
+</mat-toolbar>
