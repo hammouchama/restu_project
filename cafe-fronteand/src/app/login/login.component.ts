@@ -28,7 +28,15 @@ export class LoginComponent implements OnInit {
       (response: any) => {
         this.userAthiService.setRole(response.role)
         this.userAthiService.setToken(response.token)
-        this.router.navigate(["/home"])
+        const role = response.role
+        console.log(response)
+        if (role == "Admin") {
+
+          this.router.navigate(["/admin"])
+        } else {
+          this.router.navigate(["/home"])
+        }
+
       },
       (error) => { console.log(error) }
     )

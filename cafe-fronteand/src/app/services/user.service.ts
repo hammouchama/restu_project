@@ -21,7 +21,6 @@ export class UserService {
     return this.httpClient.post(
       this.url + "/user/login", data, {
       headers: this.requestHeader.set("No-Auth", 'true')
-
     }
     )
   }

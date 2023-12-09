@@ -16,8 +16,8 @@ export class UserAuthService {
   public setToken(jwtToken: string) {
     localStorage.setItem("token", jwtToken)
   }
-  public getToken() {
-    return localStorage.getItem("token")
+  public getToken(): string {
+    return "" + localStorage.getItem("token")
   }
   public clear() {
     localStorage.clear();
@@ -25,5 +25,8 @@ export class UserAuthService {
 
   public isLoggedIn() {
     return this.getRole() && this.getToken()
+  }
+  public isAdmmin() {
+    return this.getRole() && this.getRole() === "Admin";
   }
 }
