@@ -13,7 +13,7 @@ export class UserService {
   signup(data: any) {
     return this.httpClient.post(
       this.url + "/user/signup", data, {
-      headers: this.requestHeader.set("Content-Type", 'applecation/json')
+      headers: this.requestHeader.set("No-Auth", 'true')
     }
     )
   }

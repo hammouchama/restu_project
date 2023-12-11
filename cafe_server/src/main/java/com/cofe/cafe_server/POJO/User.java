@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
-@NamedQuery(name = "User.getAllUsers",query = "select new com.cofe.cafe_server.wrapper.UserWrapper(u.id,u.name,u.email,u.contactNumber,u.status) from User u where u.role='user'")
+@NamedQuery(name = "User.getAllUsers",query = "select new com.cofe.cafe_server.wrapper.UserWrapper(u.id,u.name,u.email,u.address,u.status) from User u where u.role='user'")
 
 @NamedQuery(name = "User.getAllAdmin",query = "select u.email from User u where u.role='admin'")
 
@@ -27,7 +27,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  long id;
     private String name;
-    private String contactNumber;
+    private String address;
     private String email;
     private String password;
     private String status;

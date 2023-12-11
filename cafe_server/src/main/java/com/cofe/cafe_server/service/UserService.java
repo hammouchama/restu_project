@@ -60,7 +60,7 @@ public class UserService {
          return CafeUtils.getResponseEntity(CafeConstants.SOMETHING_WENT_WRONG,HttpStatus.INTERNAL_SERVER_ERROR);
     }
     private boolean validateSignUpMap(Map<String,String> reqMap){
-        return  reqMap.containsKey("name") && reqMap.containsKey("contactNumber")
+        return  reqMap.containsKey("name") && reqMap.containsKey("address")
                 && reqMap.containsKey("email") &&reqMap.containsKey("password");
     }
     private User getUserFromMap(Map<String,String> requestMap){
@@ -68,7 +68,7 @@ public class UserService {
         user.setName(requestMap.get("name"));
         user.setEmail(requestMap.get("email"));
         user.setPassword(passwordEncoder.encode(requestMap.get("password")));
-        user.setContactNumber(requestMap.get("contactNumber"));
+        user.setAddress(requestMap.get("address"));
         user.setStatus("false");
         user.setRole("user");
         return user;

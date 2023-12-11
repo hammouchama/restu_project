@@ -1,1 +1,69 @@
-<p>signup works!</p>
+<div class="login_container">
+     <div class="login_">
+        <div class="part1">
+         
+               <h2>Welcome to the <br>SAMYOUNG User Area</h2>
+               <p>Have an account ? <a href="/login">Log in</a></p>
+          
+        </div>
+        <div class="part2">
+            <h1>Sign in</h1>
+            <div *ngIf="error" class="alert alert--error">
+               <p> <strong>Error! </strong>{{errorMessa}}</p>
+             </div>
+          <form action="" #loginForm="ngForm" (ngSubmit)="singup(loginForm)">
+               <div class="example-container">
+                    <mat-form-field class="example-full-width user-box">
+                         <mat-label>Name </mat-label>
+                         <input matInput 
+                         ngModel
+                         name="name"
+                         id="name"
+
+                         placeholder="Enter you name " required>
+                    </mat-form-field>
+               </div>
+               
+               <div class="example-container">
+                    <mat-form-field class="example-full-width user-box">
+                         <mat-label>Address </mat-label>
+                         <input matInput 
+                         ngModel
+                         name="address"
+                         id="address"
+                         placeholder="Enter you address " required>
+                    </mat-form-field>
+               </div>
+               <div class="example-container">
+                    <mat-form-field class="user-box" >
+                      <mat-label>Email</mat-label>
+                      <input matInput
+                      ngModel
+                      name="email"
+                      id="email"
+                       placeholder="something@example.com" required>
+                     
+                    </mat-form-field>
+               </div>
+                  <div class="example-container ">
+                    <mat-form-field class="example-full-width user-box" >
+                      <mat-label>Password</mat-label>
+                      <input matInput
+                      ngModel
+                      name="password"
+                      id="password"
+                      required
+                      [type]="hide ? 'password' : 'text'">
+                      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                    </mat-form-field>
+                    </div>
+                    <div class="actions">
+                         <button mat-raised-button color="primary"  type="submit">submit</button>
+                        
+                      </div>
+          </form>
+     </div>
+     </div>
+</div>
