@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300&family=Poppins:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300&family=Poppins:wght@300;700&display=swap');
+.example-container mat-form-field + mat-form-field {
+     margin-left: 8px;
+   }
+.login_container{
+  margin: 5% 16%;
+  font-family: 'Lato', sans-serif;
+  /* font-family: 'Poppins', sans-serif;
+   */
+}  
+.login_{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  width:90%;
+} 
+.part1{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.part1 h2{
+  font-size: 20px;
+  font-weight: 800;
+  text-align: start;
+}
+.part1 p{
+  font-weight: 700;
+  font-size: 18px;
+  color: #909090;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.part1 a {
+  color: #000;
+  text-shadow:none;
+}
+/**/
+a {
+  font-weight: 600;
+  text-decoration: underline; 
+  color: #909090; 
+  font-size: 18px;
+  
+}
+.part2{
+  width: 50%;
+  padding: 40px;
+ 
+  background: rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.user-box {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  height: 70px;
+  margin-bottom: 5px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-radius: 30px;
+}
+button{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  margin-bottom: 30px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-radius: 10px;
+  
+}
+.part2 h1 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #000;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.alert--error {
+     padding: 10px 35px 10px 14px;
+     background-color: #eee;
+     border-radius: 4px;
+     position: relative;
+     margin: 10px 0;
+     background: #f6ddde;
+     border-color: #d4aaac;
+     color: #972a3d;
+   }
+   
